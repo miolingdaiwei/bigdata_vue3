@@ -1,9 +1,26 @@
 <template>
-  <div>
-    <h2>view2</h2>
-  </div>
+  <div id="main"></div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { option } from "@/untils/commen";
+import * as echarts from "echarts";
+import { onMounted, onUnmounted } from "vue";
 
-<style lang="scss" scoped></style>
+let myChart: any = null;
+
+onMounted(() => {
+  const myChart = echarts.init(document.getElementById("main") as HTMLElement);
+  myChart.setOption(option);
+});
+
+onUnmounted(() => {
+  myChart.dispose();
+});
+</script>
+
+<style lang="scss" scoped>
+#main {
+  min-height: 800px;
+}
+</style>

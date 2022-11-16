@@ -27,10 +27,16 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "http://localhost:8686/api",
+        target: "http://localhost:3333",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
+      "/pp": {
+        target: "https://api.wmdb.tv/movie/api?id=1428581",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/pp/, ""),
+      },
     },
+    host: "0.0.0.0",
   },
 });

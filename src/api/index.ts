@@ -1,7 +1,8 @@
 import axios, { type AxiosRequestConfig } from "axios";
 import { ElMessage } from "element-plus";
 const request = axios.create({
-  baseURL: "/api",
+  baseURL: import.meta.env.VITE_APP_BASE_URL + "",
+  timeout: 10000,
 });
 request.defaults.withCredentials = true;
 request.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";

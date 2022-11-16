@@ -40,6 +40,11 @@ const routes: RouteRecordRaw[] = [
         path: "view4",
         component: () => import("@/views/views/View4View.vue"),
       },
+      {
+        name: "search",
+        path: "search",
+        component: () => import("@/views/views/SearchView.vue"),
+      },
     ],
   },
 ];

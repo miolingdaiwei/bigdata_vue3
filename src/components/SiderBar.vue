@@ -7,8 +7,6 @@
         class="el-menu-vertical-demo"
         default-active="2"
         text-color="#fff"
-        @open="handleOpen"
-        @close="handleClose"
         :unique-opened="true"
         router
       >
@@ -22,6 +20,13 @@
           <el-menu-item index="/view3">item three</el-menu-item>
           <el-menu-item index="/view4">item four</el-menu-item>
         </el-sub-menu>
+        <el-sub-menu index="/search">
+          <template #title>
+            <el-icon><location /></el-icon>
+            <span>view2</span>
+          </template>
+          <el-menu-item index="/search">search</el-menu-item>
+        </el-sub-menu>
       </el-menu>
     </el-col>
   </el-row>
@@ -29,12 +34,6 @@
 
 <script lang="ts" setup>
 import { Location } from "@element-plus/icons-vue";
-const handleOpen = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath);
-};
-const handleClose = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath);
-};
 </script>
 
 <style lang="scss" scoped>
