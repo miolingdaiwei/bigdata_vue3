@@ -1,17 +1,18 @@
 export interface film {
-  Title: string;
-  ImgSrc: string;
-  DirectorList: string[];
-  ScriptWriterList: string[];
-  ActorList: string[];
-  TypeList: string[];
-  Country: string[];
-  Lang: string[];
-  Date: string[];
-  RunTime: string[];
-  AnotherName: string[];
-  DouBanRate: string;
-  RatePeopleNum: string;
+  title: string;
+  imgSrc: string;
+  directorList: string[];
+  scriptWriterList: string[];
+  actorList: string[];
+  typeList: string[];
+  country: string[];
+  lang: string[];
+  date: string[];
+  runTime: string[];
+  anotherName: string[];
+  douBanRate: string;
+  ratePeopleNum: string;
+  rowKey: string;
 }
 
 export type filmList = film[];

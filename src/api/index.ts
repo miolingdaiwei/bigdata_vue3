@@ -1,7 +1,7 @@
 import axios, { type AxiosRequestConfig } from "axios";
 import { ElMessage } from "element-plus";
 const request = axios.create({
-  baseURL: import.meta.env.VITE_APP_BASE_URL + "",
+  baseURL: "/api",
   timeout: 10000,
 });
 request.defaults.withCredentials = true;
@@ -25,7 +25,7 @@ request.interceptors.response.use((res) => {
   }
   console.log(res, "res");
 
-  return res.data;
+  return res;
 });
 export default async <T = any>(config: AxiosRequestConfig) => {
   const res = await request(config);

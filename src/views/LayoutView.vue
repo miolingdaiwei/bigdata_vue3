@@ -10,17 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from "vue";
 import SiderBar from "../components/SiderBar.vue";
-import request from "@/api/index";
-onMounted(() => {
-  request({
-    method: "GET",
-    url: "/post",
-  }).then((res) => {
-    console.log(res);
-  });
-});
 </script>
 
 <style lang="scss" scoped>

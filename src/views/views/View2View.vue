@@ -10,7 +10,7 @@ import { onMounted, onUnmounted } from "vue";
 let myChart: any = null;
 
 onMounted(() => {
-  const myChart = echarts.init(document.getElementById("main") as HTMLElement);
+  myChart = echarts.init(document.getElementById("main") as HTMLElement);
   myChart.setOption(option);
 });
 

@@ -27,7 +27,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "http://localhost:3333",
+        target: "http://192.168.4.6:3333",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
@@ -35,6 +35,11 @@ export default defineConfig({
         target: "https://api.wmdb.tv/movie/api?id=1428581",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/pp/, ""),
+      },
+      https: {
+        changeOrigin: true,
+        secure: false, // 设置支持https协议的代理
+        rewrite: (path) => path.replace(/^\/https/, "https"),
       },
     },
     host: "0.0.0.0",

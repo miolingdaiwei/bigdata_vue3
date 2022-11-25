@@ -40,10 +40,10 @@ const fontSizeList = [
   19.5, 20, 20.5, 21, 22, 23, 24,
 ];
 const fontSizeListLen = fontSizeList.length;
-const customLabel = {
-  color: colorList[Math.floor(Math.random() * colorListLen)],
-  fontSize: fontSizeList[Math.floor(Math.random() * fontSizeListLen)],
-};
+// const customLabel = {
+//   color: colorList[Math.floor(Math.random() * colorListLen)],
+//   fontSize: fontSizeList[Math.floor(Math.random() * fontSizeListLen)],
+// };
 const bgColor = "#fffcf9";
 const canDraggable = false;
 export const option = {
@@ -371,6 +371,15 @@ export const option = {
         },
         {
           name: "开心",
+          value: 72,
+          draggable: canDraggable,
+          label: {
+            color: colorList[Math.floor(Math.random() * colorListLen)],
+            fontSize: fontSizeList[Math.floor(Math.random() * fontSizeListLen)],
+          },
+        },
+        {
+          name: "hh",
           value: 72,
           draggable: canDraggable,
           label: {
